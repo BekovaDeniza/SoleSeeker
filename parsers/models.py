@@ -11,7 +11,7 @@ class Site(models.Model):
 
 class ParserConfig(models.Model):
     site = models.ForeignKey(Site, on_delete=models.CASCADE, related_name='site')
-    file_path = models.FilePathField(path='sources', match='*.py')
+    file_path = models.FilePathField(path='sources/', match='*.py')
     name = models.CharField(max_length=100, unique=True)
     active = models.BooleanField(default=False)
 

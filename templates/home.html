@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Sole Seeker{% endblock %}
+
+{% block content %}
+{% load static %}
+
+{% load static %}
+
+  {% if sneakers %}
+    <ul>
+      {% for sneaker in sneakers %}
+        <li>{{ sneaker.name }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No sneakers available.</p>
+  {% endif %}
+{% endblock %}
+
